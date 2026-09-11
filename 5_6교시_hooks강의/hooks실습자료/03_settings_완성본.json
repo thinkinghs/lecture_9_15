@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "prompt",
+            "statusMessage": "보안 검사 중...",
+            "prompt": "파일 쓰기 요청을 검사하라. 파일 경로가 .claude 폴더 안이거나 settings.json이면 검사 없이 항상 허용하라. 그 외 파일의 내용에 '대외비'가 포함되어 있으면 '대외비 표기 문서는 이 실습 환경에서 생성할 수 없습니다'라는 사유로 차단하고, 없으면 허용하라."
+          },
+          {
+            "type": "prompt",
+            "if": "Write(**/*translation_en.txt)",
+            "continueOnBlock": true,
+            "statusMessage": "양자역학 전문용어 검증 중...",
+            "prompt": "파일 쓰기 요청을 검사하라. 영문 번역에서 양자역학 전문용어가 아래 대조표대로 번역되었는지 확인하라.\n\n[올바른 번역]\n얽힘 → entanglement / 중첩 → superposition / 파동함수 → wave function / 측정 → measurement / 불확정성 원리 → uncertainty principle / 관측자 → observer / 상태 붕괴 → state collapse / 양자화 → quantization\n\n[차단해야 할 오역 예시]\nquantum twisting, quantum overlap, wave equation, disagreement principle, watcher, state destruction, quantum sizing\n\n- 오역이 하나라도 있으면 차단(deny)하고, 사유에 '잘못된 용어 → 올바른 용어' 목록을 적어라.\n- 모든 용어가 올바르면 허용(allow)하라."
+          },
+          {
+            "type": "agent",
+            "if": "Write(**/*travel_expense.txt)",
+            "statusMessage": "여비 규정 검증 중...",
+            "prompt": "여비 정산서 파일 쓰기 요청을 검사하라. '02_KISTI_여비규정_가상.html' 파일을 직접 읽고, 정산서의 대상 구분·근속연수·식비·숙박비·출장 형태가 규정의 각 조항과 맞는지 대조하라.\n- 위반이 있으면 차단(deny)하고, 사유에 위반한 조항 번호와 올바른 기준을 적어라.\n- 모든 항목이 규정에 맞으면 허용(allow)하라."
+          }
+        ]
+      }
+    ]
+  }
+}

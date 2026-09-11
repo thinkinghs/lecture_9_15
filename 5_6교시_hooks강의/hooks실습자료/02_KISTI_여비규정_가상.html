@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>국내 출장 여비 지급 규정 (교육용 가상 규정)</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #5a6068;
+    --line: #dcdfe3;
+    --line-strong: #b9bec4;
+    --accent: #17466b;
+    --bg-soft: #f6f7f8;
+    --warn-bg: #fff8e6;
+    --warn-line: #e0b93a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0 20px 80px;
+    background: #fff;
+    color: var(--ink);
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", "Noto Sans KR", sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    word-break: keep-all;
+  }
+
+  .wrap { max-width: 820px; margin: 0 auto; }
+
+  /* ── 머리말 ── */
+  header {
+    padding: 48px 0 20px;
+    border-bottom: 3px solid var(--accent);
+  }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  .notice {
+    margin: 24px 0 0;
+    padding: 14px 18px;
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-line);
+    font-size: 15px;
+    color: #6b5410;
+  }
+
+  /* ── 목차 ── */
+  nav {
+    margin: 32px 0 8px;
+    padding: 18px 20px;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+  }
+  nav h2 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    font-weight: 700;
+  }
+  nav ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px 24px;
+    font-size: 15px;
+  }
+  nav a { color: var(--accent); text-decoration: none; }
+  nav a:hover, nav a:focus { text-decoration: underline; }
+
+  /* ── 본문 ── */
+  section { margin: 44px 0 0; scroll-margin-top: 16px; }
+
+  h2.article {
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    font-size: 21px;
+    border-bottom: 1px solid var(--line-strong);
+  }
+  h2.article .no {
+    display: inline-block;
+    min-width: 3.6em;
+    color: var(--accent);
+  }
+
+  ol.clauses { margin: 0; padding-left: 1.5em; }
+  ol.clauses > li { margin: 6px 0; }
+  ol.clauses ul { margin: 6px 0; padding-left: 1.2em; }
+  ol.clauses ul li { margin: 3px 0; color: var(--ink-soft); }
+
+  p.lead { margin: 0 0 12px; }
+
+  /* ── 표 ── */
+  .table-scroll { overflow-x: auto; margin: 18px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    font-variant-numeric: tabular-nums;
+    min-width: 460px;
+  }
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 14px;
+    color: var(--ink-soft);
+    padding-bottom: 8px;
+  }
+  th, td {
+    border: 1px solid var(--line);
+    padding: 11px 14px;
+    text-align: left;
+    vertical-align: top;
+  }
+  thead th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  tbody tr:nth-child(even) { background: var(--bg-soft); }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  td strong { font-weight: 700; }
+
+  /* ── 꼬리말 ── */
+  footer {
+    margin: 56px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 620px) {
+    body { font-size: 16px; padding: 0 16px 60px; }
+    h1 { font-size: 24px; }
+    h2.article { font-size: 19px; }
+    nav ol { grid-template-columns: 1fr; }
+    h2.article .no { display: block; min-width: 0; }
+  }
+
+  @media print {
+    body { font-size: 11pt; }
+    nav { display: none; }
+    section { break-inside: avoid; }
+    thead th { background: #eee; color: #000; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">교육용 가상 규정</p>
+    <h1>국내 출장 여비 지급 규정</h1>
+    <div class="notice">
+      본 규정은 Claude Code hooks 실습을 위해 작성된 <strong>가상의 규정</strong>입니다.
+      실제 KISTI 규정이 아니며, 실제 여비 산정에 사용할 수 없습니다.
+    </div>
+  </header>
+
+  <nav aria-label="조항 목차">
+    <h2>목차</h2>
+    <ol>
+      <li><a href="#art1">제1조 목적 및 적용 범위</a></li>
+      <li><a href="#art2">제2조 내부 직원 여비 지급 기준</a></li>
+      <li><a href="#art3">제3조 식비 산정 방법</a></li>
+      <li><a href="#art4">제4조 외부인 여비 지급 기준</a></li>
+      <li><a href="#art5">제5조 숙박비 지급 제한</a></li>
+      <li><a href="#art6">제6조 여비 정산서 필수 기재사항</a></li>
+      <li><a href="#example">참고 · 산정 예시</a></li>
+    </ol>
+  </nav>
+
+  <section id="art1">
+    <h2 class="article"><span class="no">제1조</span>목적 및 적용 범위</h2>
+    <ol class="clauses">
+      <li>본 규정은 국내 출장 시 지급하는 식비와 숙박비의 산정 기준을 정함을 목적으로 한다.</li>
+      <li>본 규정은 내부 직원과 외부인(자문위원, 외부 참여연구원 등) 모두에게 적용한다.</li>
+      <li>본 규정에 정하지 않은 항목은 지급하지 않는다.</li>
+    </ol>
+  </section>
+
+  <section id="art2">
+    <h2 class="article"><span class="no">제2조</span>내부 직원 여비 지급 기준</h2>
+    <p class="lead">내부 직원의 식비와 숙박비는 발령일 기준 근속연수에 따라 아래 구간을 적용한다.</p>
+
+    <div class="table-scroll">
+      <table>
+        <caption>근속연수 구간별 지급 기준</caption>
+        <thead>
+          <tr>
+            <th scope="col">근속연수 구간</th>
+            <th scope="col" class="num">식비 (1일당)</th>
+            <th scope="col" class="num">숙박비 상한 (1박당)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">5년 미만</th><td class="num">25,000원</td><td class="num">80,000원</td></tr>
+          <tr><th scope="row">5년 이상 10년 미만</th><td class="num">30,000원</td><td class="num">90,000원</td></tr>
+          <tr><th scope="row">10년 이상</th><td class="num">35,000원</td><td class="num">120,000원</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ol class="clauses">
+      <li>근속연수는 출장 개시일 기준으로 산정한다.</li>
+      <li>직급, 직위, 담당 업무는 구간 산정에 반영하지 않는다.</li>
+    </ol>
+  </section>
+
+  <section id="art3">
+    <h2 class="article"><span class="no">제3조</span>식비 산정 방법</h2>
+    <ol class="clauses">
+      <li>식비는 출장 일수에 1일당 정액을 곱하여 산정한다.</li>
+      <li>출장 일수는 다음과 같이 계산한다.
+        <ul>
+          <li>당일 출장: 1일</li>
+          <li>1박 2일: 2일</li>
+          <li>2박 3일: 3일</li>
+        </ul>
+      </li>
+      <li>식비는 영수증 제출 여부와 무관하게 정액으로 지급한다.</li>
+    </ol>
+  </section>
+
+  <section id="art4">
+    <h2 class="article"><span class="no">제4조</span>외부인 여비 지급 기준</h2>
+    <ol class="clauses">
+      <li>외부인에게는 제2조의 근속연수 구간을 적용하지 않는다. 외부 경력, 재직 기간, 학위, 직위는 구간 산정의 근거가 되지 않는다.</li>
+      <li>외부인의 여비는 아래 정액 기준에 따른다.</li>
+    </ol>
+
+    <div class="table-scroll">
+      <table>
+        <caption>외부인 대상 구분별 지급 기준</caption>
+        <thead>
+          <tr>
+            <th scope="col">대상 구분</th>
+            <th scope="col" class="num">식비 (1일당)</th>
+            <th scope="col" class="num">숙박비 상한 (1박당)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">자문위원</th><td class="num">30,000원</td><td class="num">100,000원</td></tr>
+          <tr><th scope="row">외부 참여연구원</th><td class="num">25,000원</td><td class="num">80,000원</td></tr>
+          <tr><th scope="row">그 밖의 외부인</th><td class="num">25,000원</td><td class="num">80,000원</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ol class="clauses" start="3">
+      <li>외부인의 대상 구분이 불분명한 경우 “그 밖의 외부인” 기준을 적용한다.</li>
+    </ol>
+  </section>
+
+  <section id="art5">
+    <h2 class="article"><span class="no">제5조</span>숙박비 지급 제한</h2>
+    <ol class="clauses">
+      <li>숙박을 하지 않는 당일 출장에는 숙박비를 지급하지 않는다. 이동 거리, 이동 시간, 업무 강도를 사유로 한 예외는 인정하지 않는다.</li>
+      <li>숙박비는 영수증에 기재된 실지출액을 기준으로 지급하되, 제2조 또는 제4조의 상한을 초과하는 금액은 지급하지 않는다.</li>
+      <li>영수증을 제출하지 않은 숙박에 대해서는 숙박비를 지급하지 않는다.</li>
+      <li>숙박비 상한은 1박 단위로 적용하며, 여러 박의 금액을 합산하여 상한을 넘기는 방식의 정산은 인정하지 않는다.</li>
+    </ol>
+  </section>
+
+  <section id="art6">
+    <h2 class="article"><span class="no">제6조</span>여비 정산서 필수 기재사항</h2>
+    <p class="lead">여비 정산서에는 다음 항목을 모두 기재하여야 한다.</p>
+    <ol class="clauses">
+      <li>대상 구분 (내부 직원 또는 외부인의 세부 구분)</li>
+      <li>근속연수 (내부 직원의 경우) 또는 대상 구분 근거 (외부인의 경우)</li>
+      <li>출장 형태 (당일 출장, 1박 2일 등)</li>
+      <li>식비 산정 내역 (1일당 정액 × 출장 일수)</li>
+      <li>숙박비 산정 내역 (영수증 금액, 적용 상한, 인정 금액)</li>
+      <li>지급 총액</li>
+      <li>적용 조항</li>
+    </ol>
+  </section>
+
+  <section id="example">
+    <h2 class="article">참고 · 산정 예시</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>사례별 산정 내역</caption>
+        <thead>
+          <tr>
+            <th scope="col">사례</th>
+            <th scope="col">산정 내역</th>
+            <th scope="col" class="num">총액</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">근속 3년 내부 직원<br>당일 출장</th>
+            <td>식비 25,000 × 1일<br>숙박비 없음 (제5조 1항)</td>
+            <td class="num"><strong>25,000원</strong></td>
+          </tr>
+          <tr>
+            <th scope="row">근속 7년 내부 직원<br>1박 2일, 영수증 88,000원</th>
+            <td>식비 30,000 × 2일 = 60,000<br>숙박비 88,000 (상한 90,000 이내)</td>
+            <td class="num"><strong>148,000원</strong></td>
+          </tr>
+          <tr>
+            <th scope="row">자문위원<br>1박 2일, 영수증 115,000원</th>
+            <td>식비 30,000 × 2일 = 60,000<br>숙박비 100,000 (상한 초과분 15,000 미지급)</td>
+            <td class="num"><strong>160,000원</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <strong>부칙</strong> — 본 규정은 교육 실습 목적으로만 사용한다.
+  </footer>
+
+</div>
+</body>
+</html>
